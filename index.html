@@ -38,11 +38,15 @@ function changeBodyColor(color){
     changeLinkColor("blue");
   }
   else if (color == "purple"){
-    document.body.style.color = "black";  
+    document.body.style.color = "white";  
   }
   else if (color == "blue"){
     document.body.style.color = "white";
     }
+    else if (color == "green"){
+    document.body.style.color = "black";  
+  changeLinkColor("blue");
+  }
   
   
 }
@@ -98,6 +102,8 @@ We have put together some buttons below to help you customize the look of this p
 <input name="changeColor" type="radio" onClick="changeBodyColor('black');">Black</input>
 <input name="changeColor" type="radio" onClick="changeBodyColor('white');">White</input>
 <input name="changeColor" type="radio" onClick="changeBodyColor('purple');">Purple</input>
+<input name="changeColor" type="radio" onClick="changeBodyColor('green');">Green</input>
+
 </form>
 
 <h2>
