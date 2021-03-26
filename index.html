@@ -47,7 +47,7 @@ font-size:50px;
 }
 function changeBodyColor(color){
   deleteAllCookies()
-  document.cookie = "bgColor = "+color;
+  document.cookie = "bgColor="+color;
   document.getElementById("footer").style.color = "yellow";  
   changeLinkColor("yellow")
   document.body.style.backgroundColor = color;
