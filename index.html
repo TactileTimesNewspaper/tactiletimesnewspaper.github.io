@@ -25,7 +25,7 @@ font-size:50px;
   </style>
 <script>
 function changeBodyColor(color){
-  document.getElementById("footer").style.color = red;  
+  document.getElementById("footer").style.color = "yellow";  
   changeLinkColor("yellow")
   document.body.style.backgroundColor = color;
   if (color == "white"){
@@ -38,7 +38,7 @@ function changeBodyColor(color){
   else if (color == "yellow"){
     document.body.style.color = "black";
     changeLinkColor("blue");
-  document.getElementById("footer").style.color = red;
+    document.getElementById("footer").style.color = "red";
   }
   else if (color == "purple"){
     document.body.style.color = "white";  
@@ -49,6 +49,7 @@ function changeBodyColor(color){
     else if (color == "green"){
     document.body.style.color = "black";  
   changeLinkColor("blue");
+  document.getElementById("footer").style.color = "red";  
   }
   
   
