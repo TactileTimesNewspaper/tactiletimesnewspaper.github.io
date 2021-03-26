@@ -25,9 +25,7 @@ font-size:50px;
   </style>
 <script>
 function changeBodyColor(color){
-  document.alinkColor = "yellow";
-  document.linkColor = "yellow";
-  document.vlinkColor = "yellow";
+  changeLinkColor("yellow")
   document.body.style.backgroundColor = color;
   if (color == "white"){
     document.body.style.color = "black";
@@ -37,11 +35,18 @@ function changeBodyColor(color){
   }
   else if (color == "yellow"){
     document.body.style.color = "black";
-    document.alinkColor = "blue";
-    document.linkColor = "blue";
-    document.vlinkColor = "blue";
+    changeLinkColor("blue");
   }
   
+  
+}
+
+function changeLinkColor(color){
+  var links = document.getElementsByTagName("a");
+  links.forEach(link => {
+    link.style.color = color;
+  })
+
   
 }
 </script>
