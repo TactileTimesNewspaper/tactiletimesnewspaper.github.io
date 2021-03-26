@@ -25,12 +25,17 @@ font-size:50px;
   </style>
 <script>
 function changeBodyColor(color){
+  document.alinkColor = "yellow"
   document.body.style.backgroundColor = color;
   if (color == "white"){
     document.body.style.color = "black";
   }
   else if (color == "black"){
     document.body.style.color = "white";
+  }
+  else if (color == "yellow"){
+    document.body.style.color = "black";
+    document.alinkColor = "blue";
   }
 }
 </script>
