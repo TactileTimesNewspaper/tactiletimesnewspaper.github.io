@@ -24,7 +24,15 @@ font-size:50px;
 }
   </style>
 <script>
-
+function changeBodyColor(color){
+  document.body.style.backgroundColor = color;
+  if (color == "white"){
+    document.body.style.color = "black";
+  }
+  else if (color == "black"){
+    document.body.style.color = "white";
+  }
+}
 </script>
 </head>
 <body>
@@ -62,11 +70,11 @@ You are welcome to visit our <a href="contribute.html">Contribute page</a> at an
 We have put together some buttons below to help you customize the look of this page.
 <h3>Background colour</h3>
 <form>
-<input name="changeColor" type="radio" onClick="document.bgColor='red';">Red</input>
-<input name="changeColor" type="radio" onClick="document.bgColor='Blue';">Blue</input>
-<input name="changeColor" type="radio" onClick="document.bgColor='Yellow';">Yellow</input>
-<input name="changeColor" type="radio" onClick="document.bgColor='black';">Black</input>
-<input name="changeColor" type="radio" onClick="document.bgColor='white';">White</input>
+<input name="changeColor" type="radio" onClick="changeBodyColor('red');">Red</input>
+<input name="changeColor" type="radio" onClick="changeBodyColor('blue');">Blue</input>
+<input name="changeColor" type="radio" onClick="changeBodyColor('yellow');">Yellow</input>
+<input name="changeColor" type="radio" onClick="changeBodyColor('black');">Black</input>
+<input name="changeColor" type="radio" onClick="changeBodyColor('white');">White</input>
 </form>
 
 <h2>
