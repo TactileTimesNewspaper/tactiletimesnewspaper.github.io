@@ -25,7 +25,9 @@ font-size:50px;
   </style>
 <script>
 function changeBodyColor(color){
-  document.a.style.color = "yellow"
+  document.alinkColor = "yellow";
+  document.linkColor = "yellow";
+  document.vlinkColor = "yellow";
   document.body.style.backgroundColor = color;
   if (color == "white"){
     document.body.style.color = "black";
@@ -35,8 +37,12 @@ function changeBodyColor(color){
   }
   else if (color == "yellow"){
     document.body.style.color = "black";
-    document.a.style.color = "blue";
+    document.alinkColor = "blue";
+    document.linkColor = "blue";
+    document.vlinkColor = "blue";
   }
+  
+  
 }
 </script>
 </head>
