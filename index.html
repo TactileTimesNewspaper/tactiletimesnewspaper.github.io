@@ -24,6 +24,15 @@ font-size:50px;
 }
   </style>
 <script>
+  const list = "<ul>
+<li><a href="about">About Us</a></li>
+<li><a href="subscribe">Subscribe for free</a></li>
+<li><a href="issues.html">Issue Archive</a></li>
+<li><a href="contribute">Contribute to Issue 4</a></li>
+<li><a href="contact">Contact us</a></li>
+<li><a href="#menu">View full menu</a></li>
+</ul>""
+  
   function clearCookies(){
     deleteAllCookies();
     document.getElementById("cookieButton").innerHTML = "Successfully cleared data"+document.cookie
@@ -100,6 +109,16 @@ function restoreBgColor(){
     changeBodyColor(readCookie(bgColor));
   }
 }
+
+function toggleMenu(){
+  if (document.getElementById("topmenu").innerHTML != ""){
+    document.getElementById("topmenu").innerHTML = "";
+  }
+else{
+  document.getElementById("topmenu").innerHTML = list;
+}
+}
+
 </script>
 </head>
 <body onload="restoreBgColor()">
@@ -107,7 +126,9 @@ function restoreBgColor(){
 <div style="text-align: center; border:5px; border-radius:10px; font-size:120px; border-style:dotted; border-color:blue"><b>The Tactile Times</b><br/><div style="font-size:25px;">A newspaper by young braillists, for young braillists</div></div>
 <br/><br/>    
 <a href="#intro">Skip to introduction</a>
-    <ul>
+<button id="toggle" onClick="toggleMenu()">Toggle navigation menu</button>
+<div id="topmenu">    
+<ul>
 <li><a href="about">About Us</a></li>
 <li><a href="subscribe">Subscribe for free</a></li>
 <li><a href="issues.html">Issue Archive</a></li>
@@ -115,6 +136,7 @@ function restoreBgColor(){
 <li><a href="contact">Contact us</a></li>
 <li><a href="#menu">View full menu</a></li>
 </ul>
+</div>
 <h1 id="home" style="font-size:75px;">
 Home
 </h1>
