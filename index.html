@@ -24,7 +24,7 @@ font-size:50px;
 }
   </style>
 <script>
-list = '<ul><li><a href="about">About Us</a></li><li><a href="subscribe">Subscribe for free</a></li><li><a href="issues.html">Issue Archive</a></li><li><a href="contribute">Contribute to Issue 4</a></li><li><a href="contact">Contact us</a></li><li><a href="#menu">View full menu</a></li><li><a href="publicity">Publicity</a></li></ul>';
+list = '<a href="#intro">Skip to introduction</a><br/><ul><li><a href="about">About Us</a></li><li><a href="subscribe">Subscribe for free</a></li><li><a href="issues.html">Issue Archive</a></li><li><a href="contribute">Contribute to Issue 4</a></li><li><a href="contact">Contact us</a></li><li><a href="#menu">View full menu</a></li><li><a href="publicity">Publicity</a></li></ul>';
   
   function clearCookies(){
     deleteAllCookies();
@@ -118,10 +118,10 @@ else{
     <a name="top"></a>
 <div style="text-align: center; border:5px; border-radius:10px; font-size:120px; border-style:dotted; border-color:blue"><b>The Tactile Times</b><br/><div style="font-size:25px;">A newspaper by young braillists, for young braillists</div></div>
 <br/><br/>    
-<a href="#intro">Skip to introduction</a>
 <button id="toggle" onClick="toggleMenu()">Toggle navigation menu</button>
 <div id="topmenu">    
-<ul>
+  <a href="#intro">Skip to introduction</a>
+  <ul>
 <li><a href="about">About Us</a></li>
 <li><a href="subscribe">Subscribe for free</a></li>
 <li><a href="issues.html">Issue Archive</a></li>
