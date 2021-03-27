@@ -40,7 +40,7 @@ font-size:50px;
     return null;
 }
   
-  function deleteAllCookies() {
+  function deleteAllCookies(){
     var cookies = document.cookie.split(";");
 
     for (var i = 0; i < cookies.length; i++) {
@@ -50,6 +50,7 @@ font-size:50px;
         document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
     }
 }
+
 function changeBodyColor(color){
   deleteAllCookies()
   document.cookie = "bgColor="+color;
