@@ -112,6 +112,9 @@ else{
 }
 }
 
+function changeFontSize(size){
+document.body.style.fontSize = size;
+}
 </script>
 </head>
 <body onload="restoreBgColor()">
@@ -153,7 +156,14 @@ We have put together some buttons below to help you customize the look of this p
 <input name="changeColor" type="radio" onClick="changeBodyColor('brown');">Brown</input>
 
 </form>
+<h3>Font size</h3>
+<form>
+<input name="changeFont" type="radio" onClick="changeFontSize('10px');">10px</input>
+<input name="changeFont" type="radio" onClick="changeFontSize('20px');">20px</input>
+<input name="changeFont" type="radio" onClick="changeFontSize('30px');">30px</input>
+<input name="changeFont" type="radio" onClick="changeFontSize('40px');">40px</input>
 
+</form>
 <h2>
 Navigation
 </h2>
