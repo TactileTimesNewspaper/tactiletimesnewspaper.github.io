@@ -25,7 +25,7 @@ font-size:50px;
 }
   </style>
 <script>
-var shareButtons = "";
+var shareButtons = '';
 var list = '<a href="#intro">Skip to introduction</a><br/><a href="#appear">Skip to page appearance options</a><br/><ul><li><a href="about">About Us</a></li><li><a href="subscribe">Subscribe for free</a></li><li><a href="issues.html">Issue Archive</a></li><li><a href="contribute">Contribute</a></li><li><a href="contact">Contact us</a></li><li><a href="publicity">Publicity</a></li><li><a href="faqs.html">Frequently Asked Questions</a><li><a href="https://games.tactiletimes.org">Games</a></li><li><a href="#menu">View full menu</a></li></ul>';
   
   function clearCookies(){
@@ -91,7 +91,7 @@ function changeBodyColor(color){
 }
 
 function toggleShare(){
-  if (!document.getElementById("share").innerHTML === ""){
+  if (!document.getElementById("share").innerHTML == ""){
     shareButtons = document.getElementById("share");
     document.getElementById("share").innerHTML = "";
   }
@@ -136,7 +136,7 @@ document.body.style.fontSize = size;
 <br/><br/>    
 <button id="toggle" onClick="toggleMenu()" style="font-size:20; color:yellow;">Toggle navigation menu</button>
 <div id="topmenu"></div>
-<button id="shareButtonToggle" onClick="toggleShare()">Toggle share buttons</button>
+<button id="shareButtonToggle" onclick="toggleShare()">Hide share buttons</button>
 <div id="share">
   <g:sharetoclassroom url="https://"https://tactiletimes.org" size="32"></g:sharetoclassroom>
 
