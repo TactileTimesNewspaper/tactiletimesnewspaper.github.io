@@ -25,7 +25,8 @@ font-size:50px;
 }
   </style>
 <script>
-list = '<a href="#intro">Skip to introduction</a><br/><a href="#appear">Skip to page appearance options</a><br/><ul><li><a href="about">About Us</a></li><li><a href="subscribe">Subscribe for free</a></li><li><a href="issues.html">Issue Archive</a></li><li><a href="contribute">Contribute</a></li><li><a href="contact">Contact us</a></li><li><a href="publicity">Publicity</a></li><li><a href="faqs.html">Frequently Asked Questions</a><li><a href="https://games.tactiletimes.org">Games</a></li><li><a href="#menu">View full menu</a></li></ul>';
+var shareButtons = "";
+var list = '<a href="#intro">Skip to introduction</a><br/><a href="#appear">Skip to page appearance options</a><br/><ul><li><a href="about">About Us</a></li><li><a href="subscribe">Subscribe for free</a></li><li><a href="issues.html">Issue Archive</a></li><li><a href="contribute">Contribute</a></li><li><a href="contact">Contact us</a></li><li><a href="publicity">Publicity</a></li><li><a href="faqs.html">Frequently Asked Questions</a><li><a href="https://games.tactiletimes.org">Games</a></li><li><a href="#menu">View full menu</a></li></ul>';
   
   function clearCookies(){
     deleteAllCookies();
@@ -89,6 +90,17 @@ function changeBodyColor(color){
   
 }
 
+function toggleShare(){
+  if (!document.getElementById("share").innerHTML === ""){
+    shareButtons = document.getElementById("share");
+    document.getElementById("share").innerHTML = "";
+  }
+    else {
+      document.getElementById("share").innerHTML = shareButtons;
+    }
+  
+}
+
 function changeLinkColor(color){
   var links = document.getElementsByTagName("a");
   for (var i = 0; i < links.length; i++){
@@ -124,6 +136,12 @@ document.body.style.fontSize = size;
 <br/><br/>    
 <button id="toggle" onClick="toggleMenu()" style="font-size:20; color:yellow;">Toggle navigation menu</button>
 <div id="topmenu"></div>
+<button id="shareButtonToggle" onClick="toggleShare()">Toggle share buttons</button>
+<div id="share">
+  <g:sharetoclassroom url="https://"https://tactiletimes.org" size="32"></g:sharetoclassroom>
+
+
+</div>
 <h1 id="home" style="font-size:75px;">
 Home
 </h1>
@@ -266,8 +284,9 @@ document.write("Website last updated: " + document.lastModified+".");
 <div id="cookieButton">
 <button id="clear-all" onClick="clearCookies()">Clear all cookies and data related to this page</button>
 </div>
-<script src="https://apis.google.com/js/platform.js" async defer></script><g:sharetoclassroom url="https://"https://tactiletimes.org" size="32"></g:sharetoclassroom>
 </footer>
 </p>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 </body>
 </html>
