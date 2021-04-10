@@ -90,16 +90,17 @@ function changeBodyColor(color){
   
 }
 
-function toggleShare(){
-  if (!document.getElementById("share").innerHTML == ""){
-    shareButtons = document.getElementById("share");
-    document.getElementById("share").innerHTML = "";
+function toggleShare() {
+  var x = document.getElementById("share");
+  if (x.style.display === "none") {
+    x.style.display = "block";
   }
-    else {
-      document.getElementById("share").innerHTML = shareButtons;
-    }
-  
+   else {
+    x.style.display = "none";
+  }
 }
+
+
 
 function changeLinkColor(color){
   var links = document.getElementsByTagName("a");
@@ -136,8 +137,9 @@ document.body.style.fontSize = size;
 <br/><br/>    
 <button id="toggle" onClick="toggleMenu()" style="font-size:20; color:yellow;">Toggle navigation menu</button>
 <div id="topmenu"></div>
+<button id="shareButtonToggle" onclick="toggleShare()">Toggle share buttons</button><br/>
+  
 <div id="share">
-  <button id="shareButtonToggle" onclick="toggleShare()">Hide share buttons</button><br/>
   <g:sharetoclassroom url="https://tactiletimes.org" size="50"></g:sharetoclassroom>
   <br/>
 <a href="https://wa.me/?text=I%20thought%20that%20you%20might%20find%20this%20newspaper%20by%20young%20braillists%20for%20young%20braillists%20interesting%3A%20https%3A%2F%2Ftactiletimes.org">
