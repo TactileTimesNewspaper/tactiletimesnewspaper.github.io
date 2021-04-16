@@ -47,7 +47,7 @@
 <li><a href="https://games.tactiletimes.org">Games</a></li>
 
               <li id="history-drop" class="dropdown">
-                <a href="https://qifi.org/#" role="button" class="dropdown-toggle" data-toggle="dropdown">History <b class="caret"></b></a>
+                <a href="https://tactiletimes.org/qr-wifi#" role="button" class="dropdown-toggle" data-toggle="dropdown">History <b class="caret"></b></a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="history-drop">
                 </ul>
               </li>
@@ -164,19 +164,6 @@
                 // e.show() sets display:inline, but we need inline-block
                 e.css('display', 'inline-block');
             }
-        };
-
-        function save () {
-            var ssid = $('#ssid').val();
-            if (!ssid) return;
-            var hidden = $('#hidden').is(':checked');
-            var enc = $('#enc').val();
-            var key = $('#key').val();
-            var storage = $.localStorage('qificodes');
-            if (!storage) storage = {};
-            storage[ssid] = {'hidden': hidden, 'enc': enc, 'key': key};
-            $.localStorage('qificodes', storage);
-            loadhistory();
         };
 
         function load(ssid) {
