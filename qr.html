@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" media="print" href="./qr-wifi_files/print.css">
     <link rel="icon" href="https://qifi.org/qifi.png" type="image/x-icon">
     <link rel="manifest" href="https://qifi.org/manifest.json">
-<title>Generate a WiFi QR Code - Tactile Times Newspaper</title>
+<title>Generate a QR Code - Tactile Times Newspaper</title>
     <link rel="stylesheet" type="text/css" media="all" href="./qr-wifi_files/bootstrap.min.css">
     <style>
       body {
@@ -58,8 +58,9 @@
 
     <div class="container">
     <section id="generator">
-    <div class="page-header"><h1 id="title">Generate a QR Code for your WiFi network</h1></div>
+    <div class="page-header"><h1 id="title">Generate a QR Code</h1></div>
     <div id="history"></div>
+<h2>Generate a WiFi QR code</h2><br/>
 <p>Fill in the details for your WiFi network below. These details will not leave your device.
 <br/>After you click Generate, click the Export link to download your WiFi QR code in PNG format.
 <br/>Nowerdays, most routers that require a simple password to connect (not including captive portals) have WPA2 encryption. Networks with a captive portal often include coffee shops, hotels and airports and often appear open on the outside. QR codes cannot automatically fill in captive portal forms.</p><br/>
@@ -108,7 +109,6 @@
     <h1 id="showkey">Passphrase: none</h1>
     <div id="qrcode"></div>
     </section>
-<span style="color: #999999;">QR Code is a registered trademark of DENSO WAVE INCORPORATED in the United States and other countries.</span>
       </div>
     </footer>
     <script src="./qr-wifi_files/jquery-3.5.1.slim.min.js.download"></script>
@@ -253,6 +253,29 @@
             });
         }
     </script>
+<iframe src="qr-generate.html" width="640" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+
+
+<span style="color: #999999;">QR Code is a registered trademark of DENSO WAVE INCORPORATED in the United States and other countries.</span>
+
+
+<script src="./qr-generate_files/service-worker.js.download">
+</script>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('service-worker.js')
+            .then(function() {
+                console.log("Service-Worker-Registered");
+            });
+    }
+</script>
+
+
+
+
 
 
 </body></html>

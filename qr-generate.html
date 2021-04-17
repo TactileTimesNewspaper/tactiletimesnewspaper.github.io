@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roneet Kumar">
+    <meta name="description" content="Code is a beautifully designed Progressive Web Application to generate QR Codes form Text.">
+    <meta name="keywords" content="roneet,kumar,parida,qr,pwa,progressive,web,apps,material,design,awesome,github,pages,github.io,roneetkumar,roneetparida,palette,code,generator,qr code">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text/URL</title>
+    <script src="./qr-generate_files/jquery.min.js.download"></script>
+    <script type="text/javascript" src="./qr-generate_files/jquery.qrcode.min.js.download"></script>
+    <script type="text/javascript" src="./qr-generate_files/index.js.download"></script>
+    <link rel="stylesheet" href="./qr-generate_files/index.min.css">
+    <meta name="theme-color" content="#191919">
+    <link rel="manifest" href="https://roneetkumar.github.io/code/functions/manifest.json">
+    <link href="./qr-generate_files/css" rel="stylesheet">
+    <link href="https://roneetkumar.github.io/code/assets/favicon.ico" rel="icon" sizes="192x192">
+    <link rel="shortcut icon" href="https://roneetkumar.github.io/code/assets/favicon.ico">
+    <link rel="apple-touch-icon" href="https://roneetkumar.github.io/code/assets/favicon.ico">
+
+</head>
+
+<body>
+    <div class="wrapper">
+<h2>Generate a QR Code of a web address or other text</h2>
+        <div class="input-elements">
+            <div class="input-bar">
+                <input type="text" class="qrText" placeholder="Type Text or URL">
+                <button type="submit" id="generate-btn">Generate</button>
+            </div>
+            <a href="https://tactiletimes.org/qr-code" download="QR-Code" class="downloadCode">
+                <div id="qrcode"></div>
+            </a>
+
+        </div>
+    </div>
+
+
+<script src="./qr-generate_files/service-worker.js.download">
+</script>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('service-worker.js')
+            .then(function() {
+                console.log("Service-Worker-Registered");
+            });
+    }
+</script>
+
+
+</body></html>
