@@ -27,7 +27,7 @@ font-size:50px;
   </style>
 <script>
 var shareButtons = '';
-var list = '<a href="#intro">Skip to introduction</a><br/><a href="#appear">Skip to page appearance options</a><br/><ul><li><a href="about">About Us</a></li><li><a href="subscribe">Subscribe for free</a></li><li><a href="issues.html">Issue Archive</a></li><li><a href="contribute">Contribute</a></li><li><a href="contact">Contact us</a></li><li><a href="publicity">Publicity</a></li><li><a href="faqs.html">Frequently Asked Questions</a><li><a href="https://games.tactiletimes.org">Games</a></li><li><a href="#menu">View full menu</a></li></ul>';
+var list = '<a href="#intro">Skip to introduction</a><br/><a href="#appear">Skip to page appearance options</a><br/><a href="#lang">Skip to translation options</a><br/><ul><li><a href="about">About Us</a></li><li><a href="subscribe">Subscribe for free</a></li><li><a href="issues.html">Issue Archive</a></li><li><a href="contribute">Contribute</a></li><li><a href="contact">Contact us</a></li><li><a href="publicity">Publicity</a></li><li><a href="faqs.html">Frequently Asked Questions</a><li><a href="https://games.tactiletimes.org">Games</a></li><li><a href="#menu">View full menu</a></li></ul>';
   
   function clearCookies(){
     deleteAllCookies();
@@ -293,9 +293,7 @@ We have a useful links page that lists links to other websites under different c
 <h2>Where to start?</h2>
 <p>
     If you don't know very much about us yet, why not start on the <a href="about.html">about us</a> page where you can find out about who we are ore browse our FAQS?<br/>If you already know about us, you might like to take a look at the useful links page which lists useful websites under different categories or check out if we are planning to publish an issue (and if so when the deadline for submitting articles is) on our Useful information page.<br/>Or, you can visit the Issues page which lists all published editions of The Tactile Times.<br/\>You can also <a href="subscribe.html">subscribe</a> to the Tactile Times to receive issues by email when they are published. <br/>Or, if you like technology and football, why not take a look at the Fantasy football area of the website?<br/>If you need to get in touch with us, visit the Contact us page to email us.</p>
-<a name="menu"></a>
-<div role="region" aria-label="Menu">
-<h2>Translate this page</h2>
+<h2 id="lang">Translate this page</h2>
 You can translate this page into your language using the buttons below.<br/>
 <div id="google_translate_element"></div>
 
@@ -306,6 +304,9 @@ function googleTranslateElementInit() {
 </script>
 
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<div role="region" aria-label="Menu">
+<a name="menu"></a>
+
 <h2>Menu:</h2>
 <ul>
 <li><a href="subscribe">Subscribe</a></li>
