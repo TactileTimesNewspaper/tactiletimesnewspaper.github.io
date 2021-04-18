@@ -29,6 +29,10 @@ font-size:50px;
 var shareButtons = '';
 var list = '<a href="#intro">Skip to introduction</a><br/><a href="#appear">Skip to page appearance options</a><br/><a href="#lang">Skip to translation options</a><br/><ul><li><a href="about">About Us</a></li><li><a href="subscribe">Subscribe for free</a></li><li><a href="issues.html">Issue Archive</a></li><li><a href="contribute">Contribute</a></li><li><a href="contact">Contact us</a></li><li><a href="publicity">Publicity</a></li><li><a href="faqs.html">Frequently Asked Questions</a><li><a href="https://games.tactiletimes.org">Games</a></li><li><a href="#menu">View full menu</a></li></ul>';
   
+  function changeTxtColor(color){
+    document.body.style.color = color;
+  }
+  
   function clearCookies(){
     deleteAllCookies();
     document.getElementById("cookieButton").innerHTML = "Successfully cleared data"+document.cookie
@@ -220,12 +224,24 @@ We have put together some buttons below to help you customize the look of this p
 <input name="changeColor" type="radio" onClick="changeBodyColor('brown');">Brown</input>
 
 </form>
+<br/>
 <h3>Font size</h3>
 <form>
 <input name="changeFont" type="radio" onClick="changeFontSize('20px');">Standard</input>
 <input name="changeFont" type="radio" onClick="changeFontSize('30px');">Large</input>
 <input name="changeFont" type="radio" onClick="changeFontSize('40px');">Largest</input>
 </form>
+<br/>
+<h3>Text colour</h3>
+<form>
+  <input name="changeColorText" type="radio" onClick="changeTxtColor('red');">Red</input>
+  <input name="changeColorText" type="radio" onClick="changeTxtColor('blue');">Blue</input>
+  <input name="changeColorText" type="radio" onClick="changeTxtColor('yellow');">Yellow</input>
+  <input name="changeColorText" type="radio" onClick="changeTxtColor('black');">Black</input>
+  <input name="changeColorText" type="radio" onClick="changeTxtColor('white');">White</input>
+</form>
+  
+<br/>
 <h3>Hyperlink colour</h3>
 <form>
 <input name="changeLinks" type="radio" onClick="changeLinkColor('Yellow');">Yellow</input>
@@ -236,6 +252,7 @@ We have put together some buttons below to help you customize the look of this p
 <input name="changeLinks" type="radio" onClick="changeLinkColor('white');">White</input>
 <input name="changeLinks" type="radio" onClick="changeLinkColor('Black');">Black</input>
 </form>
+
 <br/>We recommend you do not set the background and the link colour to the same thing, as the links wil disappear from view.<br/>Whenever you change the background colour the link colour is automatically set, so we recommend you change background colour and then link colour
 <h2>
 Navigation
