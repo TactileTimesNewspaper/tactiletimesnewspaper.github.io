@@ -33,7 +33,6 @@
 	
 	function changeBodyColor(color){
 	  document.cookie = "bgColor="+color;
-	  document.getElementById("footer").style.color = "yellow";  
 	  changeLinkColor("yellow")
 	  document.body.style.backgroundColor = color;
 	  if (color == "white"){
@@ -46,10 +45,7 @@
 	  else if (color == "yellow"){
 		document.body.style.color = "black";
 		changeLinkColor("blue");
-		document.getElementById("footer").style.color = "red";
-		document.getElementById("toggle").style.color = "red";
-		document.getElementById("toggle").style.backgroundColor = "white";
-	  }
+	  }		
 	  else if (color == "purple"){
 		document.body.style.color = "white";  
 	  }
@@ -59,7 +55,6 @@
 		else if (color == "green"){
 		document.body.style.color = "black";  
 	  changeLinkColor("blue");
-	  document.getElementById("footer").style.color = "red";  
 	  }
 	  else if (color == "orange"){
 		changeLinkColor("blue");
