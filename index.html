@@ -29,11 +29,6 @@ font-size:50px;
 var shareButtons = '';
 var list = '<a href="#intro">Skip to introduction</a><br/><a href="#appear">Skip to page appearance options</a><br/><a href="#lang">Skip to translation options</a><br/><ul><li><a href="about">About Us</a></li><li><a href="subscribe">Subscribe for free</a></li><li><a href="issues.html">Issue Archive</a></li><li><a href="contribute">Contribute</a></li><li><a href="contact">Contact us</a></li><li><a href="publicity">Publicity</a></li><li><a href="faqs.html">Frequently Asked Questions</a><li><a href="https://games.tactiletimes.org">Games</a></li><li><a href="#menu">View full menu</a></li></ul>';
   
-  function downloadIssue(){
-    var issueNumber = document.getElementById("issueNum").value;
-    window.location.href = "https://tactiletimes.org/issues/TTNIssue"+issueNumber+".docx";
-  }
-  
   function changeTxtColor(color){
     document.body.style.color = color;
   }
@@ -290,11 +285,6 @@ We have put together some buttons below to help you customize the look of this p
 <br/>
 
 <br/>We recommend you do not set the background and the link colour to the same thing, as the links wil disappear from view.<br/>Whenever you change the background colour the link colour is automatically set, so we recommend you change background colour and then link colour
-<h2>Issue downloader</h2>
-You can quickly download an issue by typing the issue number in the box below.<br/>For more options, including the ability to view issues on Google Drive, view the month when an issue was published and more visit our <a href="issues">Issues archive</a>.<br/>
-<input type="text" title="Enter issue number here..." id="issueNum"></input>
-<br/>
-<button id="submitDownload" onClick="downloadIssue()" style="color:white; background-color:black;">Download</button>
 
 <h2>
 Navigation
