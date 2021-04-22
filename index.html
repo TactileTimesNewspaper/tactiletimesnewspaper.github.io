@@ -30,6 +30,7 @@ var shareButtons = '';
 var list = '<a href="#intro">Skip to introduction</a><br/><a href="#appear">Skip to page appearance options</a><br/><a href="#lang">Skip to translation options</a><br/><ul><li><a href="about">About Us</a></li><li><a href="subscribe">Subscribe for free</a></li><li><a href="issues.html">Issue Archive</a></li><li><a href="contribute">Contribute</a></li><li><a href="contact">Contact us</a></li><li><a href="publicity">Publicity</a></li><li><a href="faqs.html">Frequently Asked Questions</a><li><a href="https://games.tactiletimes.org">Games</a></li><li><a href="#menu">View full menu</a></li></ul>';
   
   function changeTxtColor(color){
+    localStorage.txtColor = color;
     document.body.style.color = color;
   }
   
@@ -137,6 +138,9 @@ function changeHeadingColor(color){
 function restoreBgColor(){
 if (localStorage.bgColor){
   changeBodyColor(localStorage.bgColor);
+}
+if (localStorage.txtColor){
+  changeTxtColor(localStorage.txtColor);
 }
 }
   
