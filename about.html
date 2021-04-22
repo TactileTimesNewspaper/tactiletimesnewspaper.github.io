@@ -13,6 +13,169 @@ About Us - Tactile Times Newspaper
 
 
 </style>
+<script>
+function restoreColor(){
+if (localStorage.bgColor){
+  changeBodyColor(localStorage.bgColor);
+}
+if (localStorage.txtColor){
+  changeTxtColor(localStorage.txtColor);
+}
+if (localStorage.headColor){
+changeHeadingColor(localStorage.headColor);
+}
+if (localStorage.lnkColor){
+  changeLinkColor(localStorage.lnkColor);
+}
+if (localStorage.fontSize){
+  changeFontSize(localStorage.fontSize);
+}
+}
+function changeTxtColor(color){
+    localStorage.txtColor = color;
+    document.body.style.color = color;
+  }
+  
+  function clearCookies(){
+    deleteAllCookies();
+    localStorage.clear();
+    document.getElementById("cookieButton").innerHTML = "Successfully cleared data"+document.cookie
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0){ return c.substring(nameEQ.length,c.length)};
+    }
+    return null;
+}
+  
+  function deleteAllCookies(){
+    var cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    }
+}
+
+function changeBodyColor(color){
+localStorage.bgColor = color;
+  document.getElementById("footer").style.color = "yellow";  
+  changeLinkColor("yellow")
+  document.body.style.backgroundColor = color;
+  if (color == "white"){
+    document.body.style.color = "black";
+    changeLinkColor("blue");
+  }
+  else if (color == "black"){
+    document.body.style.color = "white";
+  }
+  else if (color == "yellow"){
+    document.body.style.color = "black";
+    changeLinkColor("blue");
+    document.getElementById("footer").style.color = "red";
+    document.getElementById("toggle").style.color = "red";
+    document.getElementById("toggle").style.backgroundColor = "white";
+  }
+  else if (color == "purple"){
+    document.body.style.color = "white";  
+  }
+  else if (color == "blue"){
+    document.body.style.color = "white";
+    }
+    else if (color == "green"){
+    document.body.style.color = "black";  
+  changeLinkColor("blue");
+  document.getElementById("footer").style.color = "red";  
+  }
+  else if (color == "orange"){
+    changeLinkColor("blue");
+  }
+  
+  
+}
+
+function toggleShare() {
+  var x = document.getElementById("share");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  }
+   else {
+    x.style.display = "none";
+  }
+}
+
+
+
+function changeLinkColor(color){
+  localStorage.lnkColor = color;
+  var links = document.getElementsByTagName("a");
+  for (var i = 0; i < links.length; i++){
+    links[i].style.color = color;
+  }
+  
+  
+}
+
+function changeHeadingColor(color){
+  localStorage.headColor = color;
+  var h1s = document.getElementsByTagName("h1");
+  var h2s = document.getElementsByTagName("h2");
+  var h3s = document.getElementsByTagName("h3");
+  for (var i = 0; i < h1s.length; i++){
+   h1s[i].style.color = color;
+  }
+  for (var i = 0; i < h2s.length; i++){
+   h2s[i].style.color = color;
+  }
+  for (var i = 0; i < h3s.length; i++){
+   h3s[i].style.color = color;
+  }
+}
+
+function restoreBgColor(){
+if (localStorage.bgColor){
+  changeBodyColor(localStorage.bgColor);
+}
+if (localStorage.txtColor){
+  changeTxtColor(localStorage.txtColor);
+}
+if (localStorage.headColor){
+changeHeadingColor(localStorage.headColor);
+}
+if (localStorage.lnkColor){
+  changeLinkColor(localStorage.lnkColor);
+}
+if (localStorage.fontSize){
+  changeFontSize(localStorage.fontSize);
+}
+}
+  
+
+function toggleMenu(){
+  if (document.getElementById("topmenu").innerHTML != ''){
+    document.getElementById("topmenu").innerHTML = '';
+  }
+else{
+  document.getElementById("topmenu").innerHTML = list;
+}
+}
+
+function changeFontSize(size){
+localStorage.fontSize = size;
+document.body.style.fontSize = size;
+}
+</script>
+  
+
+window.onload = restoreColor;
+</script>
 </head>
 <body>
 <h1>
