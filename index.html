@@ -112,6 +112,7 @@ function toggleShare() {
 
 
 function changeLinkColor(color){
+  localStorage.lnkColor = color;
   var links = document.getElementsByTagName("a");
   for (var i = 0; i < links.length; i++){
     links[i].style.color = color;
@@ -145,6 +146,9 @@ if (localStorage.txtColor){
 }
 if (localStorage.headColor){
 changeHeadingColor(localStorage.headColor);
+}
+if (localStorage.lnkColor){
+  changeLinkColor(localStorage.lnkColor);
 }
 }
   
