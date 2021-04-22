@@ -61,7 +61,7 @@ var list = '<a href="#intro">Skip to introduction</a><br/><a href="#appear">Skip
 }
 
 function changeBodyColor(color){
-  document.cookie = "bgColor="+color;
+localStorage.bgColor = color;
   document.getElementById("footer").style.color = "yellow";  
   changeLinkColor("yellow")
   document.body.style.backgroundColor = color;
@@ -134,10 +134,11 @@ function changeHeadingColor(color){
 }
 
 function restoreBgColor(){
-  if (!readCookie("bgColor") == null){
-    changeBodyColor(readCookie(bgColor));
-  }
+if (localStorage.bgColor){
+  changeBodyColor(localStorage.bgColor);
 }
+}
+  
 
 function toggleMenu(){
   if (document.getElementById("topmenu").innerHTML != ''){
