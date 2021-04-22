@@ -121,6 +121,7 @@ function changeLinkColor(color){
 }
 
 function changeHeadingColor(color){
+  localStorage.headColor = color;
   var h1s = document.getElementsByTagName("h1");
   var h2s = document.getElementsByTagName("h2");
   var h3s = document.getElementsByTagName("h3");
@@ -141,6 +142,9 @@ if (localStorage.bgColor){
 }
 if (localStorage.txtColor){
   changeTxtColor(localStorage.txtColor);
+}
+if (localStorage.headColor){
+changeHeadingColor(localStorage.headColor);
 }
 }
   
