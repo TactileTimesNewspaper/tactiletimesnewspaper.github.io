@@ -35,6 +35,7 @@ var list = '<a href="#intro">Skip to introduction</a><br/><a href="#appear">Skip
   
   function clearCookies(){
     deleteAllCookies();
+    localStorage.clear();
     document.getElementById("cookieButton").innerHTML = "Successfully cleared data"+document.cookie
   }
 
