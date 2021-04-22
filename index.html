@@ -150,6 +150,9 @@ changeHeadingColor(localStorage.headColor);
 if (localStorage.lnkColor){
   changeLinkColor(localStorage.lnkColor);
 }
+if (localStorage.fontSize){
+  changeFontSize(localStorage.fontSize);
+}
 }
   
 
@@ -163,6 +166,7 @@ else{
 }
 
 function changeFontSize(size){
+localStorage.fontSize = size;
 document.body.style.fontSize = size;
 }
 </script>
