@@ -183,11 +183,8 @@ document.body.style.fontSize = size;
 <button id="toggle" onClick="toggleMenu()" style="font-size:20; color:yellow; background-color:red;">Toggle navigation menu</button>
 <div id="topmenu"></div>
 </nav>
-<form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
-  <input name="sitesearch" type="hidden" value="tactiletimes.org">
-  <input autocomplete="on" class="form-control search" name="q" placeholder="Search in tactiletimes.org" required="required"  type="text">
-  <button class="button" type="submit">Search</button>
-  </form>
+<script async src="https://cse.google.com/cse.js?cx=4f551c1e6ac7a770b"></script>
+<div class="gcse-search"></div>
 <button id="shareButtonToggle" onclick="toggleShare()">Toggle share buttons</button><br/>
   
 <div id="share" style="display:none;">
