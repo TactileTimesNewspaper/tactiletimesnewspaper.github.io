@@ -1,0 +1,19 @@
+footer {
+    text-align: center;
+    padding: 2px;
+    background-color: Gold;
+    color: black;
+  }
+  body {
+    padding: 0px;
+    background-color: black;
+    color: white;
+font-size: 20px;
+  }
+a {
+color: yellow;
+}
+h2 {
+color: yellow;
+font-size: 50px;
+}
