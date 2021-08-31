@@ -6,11 +6,20 @@ function create() {
     window.location.href = "https://soundscape-app.msrenableservices.com/v1/sharemarker?name="+encodeURIComponent(document.getElementById("marker").value)+"&lat="+document.getElementById("latitude").value+"&lon="+document.getElementById("longitude").value;
 }
 
+function generate() {
+document.getElementById("link").innerHTML = "https://soundscape-app.msrenableservices.com/v1/sharemarker?name="+encodeURIComponent(document.getElementById("marker").value)+"&lat="+document.getElementById("latitude").value+"&lon="+document.getElementById("longitude").value;
+}
+}
     </script>
     </head>
     <body>
 <h1>Create a Soundscape marker</h1>
 Often you might be sent a Google Maps link, but you would like to use Soundscape to navigate. This page will help you create a Soundscape marker out of a Google Maps link.<br/>
+<h2>How to use</h2>
+<ol>
+<li>Enter your place details into the form.</li>
+<li>Choose whether to open the marker in Soundscape or generate a link to it.</li>
+</ol>
 <h2>Marker name</h2>
 Please enter a name for your marker.
 <br/>
@@ -27,6 +36,11 @@ Click the button below to open the Soundscape app and display the place as a mar
 <br/>Make sure you have the Microsoft Soundscape installed and that location services are enabled.<br/>
 
 <button onclick="create()">Open Soundscape</button>    
+<h2>Or generate a sharable link for your marker</h2>
+Click below to generate a unique link which can be shared with other people. Anyone with Soundscape installed can simply click the link to get started.
+<br/>
+<div id="link"><button onclick="generate()">Generate link</button></div>
+<h2>Menu:</h2>
 <ul>
     <li><a href="/">Home</a></li>
     <li><a href="subscribe">Subscribe</a></li>
@@ -49,4 +63,4 @@ Click the button below to open the Soundscape app and display the place as a mar
     </ul>
     
 </body>
-    </html>html>
+    </html>
