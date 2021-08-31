@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Soundscape Marker Creator - Tactile Times Newspaper</title>
+    <script>
+function create() {
+    window.location.href = "https://soundscape-app.msrenableservices.com/v1/sharemarker?name="+encodeURIComponent(document.getElementById("marker").value)+"&lat="+document.getElementById("latitude").value+"&lon="+document.getElementById("longitude").value;
+}
+
+    </script>
+    </head>
+    <body>
+<h1>Create a Soundscape marker</h1>
+Often you might be sent a Google Maps link, but you would like to use Soundscape to navigate. Thisi page will help you create a Soundscape marker out of a Google Maps link.<br/>
+<h2>Place name</h2>
+Please enter the name of the marker you woulld like to create.
+<br/>
+<input name="marker" id="marker" type="text" title="Marker Name"></input>
+
+<h2>Latitude and longitude</h2>
+Please enter the latitude and longitude of your place. You can find these details in Google Maps.
+<br/>
+Latitude: <input name="latitude" id="latitude" type="text" title="Latitude of the place"></input>
+<br/>
+Longitude: <input name="longitude" id="longitude" type="text" title="Longitude of the place"></input>
+<br/>
+<button onclick="create()">Open Soundscape</button>    
+<ul>
+    <li><a href="subscribe">Subscribe</a></li>
+    <li><a href="about">About Us</a></li>
+    <li><a href = "contact">Contact Us</a></li>
+    <li><a href="faqs">FAQ'S</a></li>
+    <li><a href="issues">Issues<a></li>
+    <li><a href="contribute">Contribute an article</a></li>
+    <li><a href="information">Useful information</a></li>
+    <li><a href="links">Useful Links</a></li>
+    <li><a href="resources">Resources</a></li>
+    <li><a href="https://tactiletimesblog.news.blog">Blog</a></li>
+    <li><a href="ttnfpl">Tactile Times fantasy football</a></li>
+    <li><a href="publicity">Publicity</a></li>
+    <li><a href="embosser">Embosser</a></li>
+    <li><a href="https://strava.com/clubs/tactiletimes">Strava club</a></li>
+    <li><a href="https://games.tactiletimes.org">Games</a></li>
+    <li><a href="qr">Generate QR code</a></li>
+    <li><a href="https://tech.tactiletimes.org">Tech blog</a></li>
+    </ul>
+    
+</body>
+    </html>html>
