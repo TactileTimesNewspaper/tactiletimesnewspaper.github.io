@@ -10,21 +10,25 @@ function create() {
     </head>
     <body>
 <h1>Create a Soundscape marker</h1>
-Often you might be sent a Google Maps link, but you would like to use Soundscape to navigate. Thisi page will help you create a Soundscape marker out of a Google Maps link.<br/>
-<h2>Place name</h2>
-Please enter the name of the marker you woulld like to create.
+Often you might be sent a Google Maps link, but you would like to use Soundscape to navigate. This page will help you create a Soundscape marker out of a Google Maps link.<br/>
+<h2>Marker name</h2>
+Please enter a name for your marker.
 <br/>
 <input name="marker" id="marker" type="text" title="Marker Name"></input>
 
 <h2>Latitude and longitude</h2>
-Please enter the latitude and longitude of your place. You can find these details in Google Maps.
+Please enter the latitude and longitude of the place you would like to mark. You can find these details in Google Maps or your other navigation app.
 <br/>
 Latitude: <input name="latitude" id="latitude" type="text" title="Latitude of the place"></input>
 <br/>
 Longitude: <input name="longitude" id="longitude" type="text" title="Longitude of the place"></input>
-<br/>
+<h2>Open Soundscape</h2>
+Click the button below to open the Soundscape app and display the place as a marker.
+<br/>Make sure you have the Microsoft Soundscape installed and that location services are enabled.<br/>
+
 <button onclick="create()">Open Soundscape</button>    
 <ul>
+    <li><a href="/">Home</a></li>
     <li><a href="subscribe">Subscribe</a></li>
     <li><a href="about">About Us</a></li>
     <li><a href = "contact">Contact Us</a></li>
