@@ -1,6 +1,21 @@
 <html>
     <head>
         <title>Soundscape Marker Creator - Tactile Times Newspaper</title>
+        <script>
+            function getLocation() {
+              if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+              } else {
+                document.getElementById("demo").innerHTML = "Geolocation is not supported by this browser. Please enter the location manually instead (see above).";
+              }
+            }
+            
+            function showPosition(position) {
+              document.getElementById("demo").innerHTML = "Your marker is ready to go. Choose to open it in Soundscape or create a link to it."
+              document.getElementById("latitude").value = position.coords.latitude;
+              document.getElementById("longitude").value = position.coords.longitude;
+            }
+            </script>
     <script>
 function create() {
     window.location.href = "https://soundscape-app.msrenableservices.com/v1/sharemarker?name="+encodeURIComponent(document.getElementById("marker").value)+"&lat="+document.getElementById("latitude").value+"&lon="+document.getElementById("longitude").value;
@@ -32,6 +47,13 @@ Please enter the latitude and longitude of the place you would like to mark. You
 Latitude: <input name="latitude" id="latitude" type="text" title="Latitude of the place"></input>
 <br/>
 Longitude: <input name="longitude" id="longitude" type="text" title="Longitude of the place"></input>
+<h2>Or mark your current location</h2>
+<div id="demo">
+When you click the button below, this website will request your location. This will stay on your device and is purely to create the marker.
+<br/>
+<button onclick="getLocation()">Get started</button>
+    </div>
+
 <h2>Open Soundscape</h2>
 Click the button below to open the Soundscape app and display the place as a marker.
 <br/>Make sure you have the Microsoft Soundscape app installed and that location services are enabled.<br/>
