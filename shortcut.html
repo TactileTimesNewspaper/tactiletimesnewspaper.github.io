@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <title>Shortcut - Tactile Times Newspaper</title>
+        <link rel="stylesheet" type="text/css" href="/ttn.css"/>
+
+
+<script>
+    function restoreColor(){
+    if (localStorage.bgColor){
+      changeBodyColor(localStorage.bgColor);
+    }
+    if (localStorage.txtColor){
+      changeTxtColor(localStorage.txtColor);
+    }
+    if (localStorage.headColor){
+    changeHeadingColor(localStorage.headColor);
+    }
+    if (localStorage.lnkColor){
+      changeLinkColor(localStorage.lnkColor);
+    }
+    if (localStorage.fontSize){
+      changeFontSize(localStorage.fontSize);
+    }
+    }
+    function changeTxtColor(color){
+        localStorage.txtColor = color;
+        document.body.style.color = color;
+      }
+      
+    
+    function changeBodyColor(color){
+    localStorage.bgColor = color;
+      changeLinkColor("yellow")
+      document.body.style.backgroundColor = color;
+      if (color == "white"){
+        document.body.style.color = "black";
+        changeLinkColor("blue");
+      }
+      else if (color == "black"){
+        document.body.style.color = "white";
+      }
+      else if (color == "yellow"){
+        document.body.style.color = "black";
+        changeLinkColor("blue");
+      }
+      else if (color == "purple"){
+        document.body.style.color = "white";  
+      }
+      else if (color == "blue"){
+        document.body.style.color = "white";
+        }
+        else if (color == "green"){
+        document.body.style.color = "black";  
+      changeLinkColor("blue");
+      }
+      else if (color == "orange"){
+        changeLinkColor("blue");
+      }
+      
+      
+    }
+    
+    function toggleShare() {
+      var x = document.getElementById("share");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      }
+       else {
+        x.style.display = "none";
+      }
+    }
+    
+    
+    
+    function changeLinkColor(color){
+      localStorage.lnkColor = color;
+      var links = document.getElementsByTagName("a");
+      for (var i = 0; i < links.length; i++){
+        links[i].style.color = color;
+      }
+      
+      
+    }
+    
+    function changeHeadingColor(color){
+      localStorage.headColor = color;
+      var h1s = document.getElementsByTagName("h1");
+      var h2s = document.getElementsByTagName("h2");
+      var h3s = document.getElementsByTagName("h3");
+      for (var i = 0; i < h1s.length; i++){
+       h1s[i].style.color = color;
+      }
+      for (var i = 0; i < h2s.length; i++){
+       h2s[i].style.color = color;
+      }
+      for (var i = 0; i < h3s.length; i++){
+       h3s[i].style.color = color;
+      }
+    }
+    
+    function restoreBgColor(){
+    if (localStorage.bgColor){
+      changeBodyColor(localStorage.bgColor);
+    }
+    if (localStorage.txtColor){
+      changeTxtColor(localStorage.txtColor);
+    }
+    if (localStorage.headColor){
+    changeHeadingColor(localStorage.headColor);
+    }
+    if (localStorage.lnkColor){
+      changeLinkColor(localStorage.lnkColor);
+    }
+    if (localStorage.fontSize){
+      changeFontSize(localStorage.fontSize);
+    }
+    }
+      
+    
+    function toggleMenu(){
+      if (document.getElementById("topmenu").innerHTML != ''){
+        document.getElementById("topmenu").innerHTML = '';
+      }
+    else{
+      document.getElementById("topmenu").innerHTML = list;
+    }
+    }
+    
+    function changeFontSize(size){
+    localStorage.fontSize = size;
+    document.body.style.fontSize = size;
+    }
+      
+    
+    window.onload = restoreColor;
+    </script>
+
+    </head>
+    <body>
+        <h1>Shortcut</h1>
+        We are very excited to launch the Tactile Times shortcut, which gives you fast access to everything we have to offer across iPhone, iPad, and even Apple Watch!
+It lets you quickly download issues for later, read the latest updates from us or play a quick round of Hangman, all in one place.
+The shortcut has a simple main menu, where you select what you would like to do. It also has clear sounds to let you know when it is opened or closed.
+N.B. This is not an app, it is an iOS Shortcut which behaves like a simple app once installed. 
+<h2>Installation instructions</h2>
+To install the Shortcut, follow the process below:
+<ol>
+    <li>If you have not done so already, go to Settings > Shortcuts on your iOS device and toggle on "Allow untrusted shortcuts". In this case, untrusted purely means anything not developed by Apple.</li>
+    <li>Click on <a href="https://www.icloud.com/shortcuts/ebe1957f859d4c8f9473e098294838a7">this link [shortcut installation]</a> from your iOS device.</li>
+    <li>An iCloud page will open. Select the "Get Shortcut" button.<`/li>
+        <li>You will be taken to the Shortcuts app. At this point, it is ready for installation.<ֽ/i>
+            <li>Scroll to the bottom of this screen and select "Add untrusted shortcut.</li>
+            <li>Make sure you are focused on the "My Shortcuts" tab of the app.</li>
+            <li>Swipe down the screen until you find the Tactile Times shortcut in the list, then swipe up until you hear "Edit" and double-tap.</li>
+            <li>You will be placed on a "Done" button. Swipe through the buttons to find "Details" and select it.</li>
+            <li>Find the "Add to Home Screen" option and select it.</li>
+            <li>Set up is now complete, go to your home screen to check it out!</li>
+</ol>
+    </body>
+</html>
