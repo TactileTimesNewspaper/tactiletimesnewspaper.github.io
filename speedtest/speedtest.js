@@ -14,7 +14,7 @@
    To initialize the test, create a new Speedtest object:
     var s=new Speedtest();
     s.setParameter("url_dl","https://theoland.tactiletimes.org/garbage.bin");
-s.setParameter("url_ul","backend/empty.txt");
+s.setParameter("url_ul","https://theoland.tactiletimes.org/empty.txt");
    Now you can think of this as a finite state machine. These are the states (use getState() to see them):
    - 0: here you can change the speedtest settings (such as test duration) with the setParameter("parameter",value) method. From here you can either start the test using start() (goes to state 3) or you can add multiple test points using addTestPoint(server) or addTestPoints(serverList) (goes to state 1). Additionally, this is the perfect moment to set up callbacks for the onupdate(data) and onend(aborted) events.
    - 1: here you can add test points. You only need to do this if you want to use multiple test points.
