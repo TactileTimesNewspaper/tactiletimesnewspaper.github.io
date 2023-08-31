@@ -39,13 +39,12 @@ function generate() {
 if (app == "ms") {
   document.getElementById("link").innerHTML = "https://soundscape-app.msrenableservices.com/v1/sharemarker?name="+encodeURIComponent(document.getElementById("marker").value)+"&lat="+document.getElementById("latitude").value+"&lon="+document.getElementById("longitude").value;
 }
-}
+
 if (app == "vv") {
   document.getElementById("link").innerHTML = "https://drwjf.github.io/v1/sharemarker?name="+encodeURIComponent(document.getElementById("marker").value)+"&lat="+document.getElementById("latitude").value+"&lon="+document.getElementById("longitude").value;
 }
 if (app == "community") {
   document.getElementById("link").innerHTML = "https://share.soundscape.services/v1/sharemarker?name="+encodeURIComponent(document.getElementById("marker").value)+"&lat="+document.getElementById("latitude").value+"&lon="+document.getElementById("longitude").value;
-}
 }
 }
 
