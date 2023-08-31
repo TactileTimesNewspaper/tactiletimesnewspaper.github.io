@@ -17,12 +17,36 @@
             }
             </script>
     <script>
+app = "ms";
+
 function create() {
-    window.location.href = "https://soundscape-app.msrenableservices.com/v1/sharemarker?name="+encodeURIComponent(document.getElementById("marker").value)+"&lat="+document.getElementById("latitude").value+"&lon="+document.getElementById("longitude").value;
+  if (app == "ms") {
+
+     
+  window.location.href = "https://soundscape-app.msrenableservices.com/v1/sharemarker?name="+encodeURIComponent(document.getElementById("marker").value)+"&lat="+document.getElementById("latitude").value+"&lon="+document.getElementById("longitude").value;
+  }
+  if (app == "vv") {
+    window.location.href = "https://drwjf.github.io/v1/sharemarker?name="+encodeURIComponent(document.getElementById("marker").value)+"&lat="+document.getElementById("latitude").value+"&lon="+document.getElementById("longitude").value;
+    
+  }
+  if (app == "community") {
+    window.location.href = "https://share.soundscape.services/v1/sharemarker?name="+encodeURIComponent(document.getElementById("marker").value)+"&lat="+document.getElementById("latitude").value+"&lon="+document.getElementById("longitude").value;
+  
+  }
 }
 
 function generate() {
-document.getElementById("link").innerHTML = "https://soundscape-app.msrenableservices.com/v1/sharemarker?name="+encodeURIComponent(document.getElementById("marker").value)+"&lat="+document.getElementById("latitude").value+"&lon="+document.getElementById("longitude").value;
+if (app == "ms") {
+  document.getElementById("link").innerHTML = "https://soundscape-app.msrenableservices.com/v1/sharemarker?name="+encodeURIComponent(document.getElementById("marker").value)+"&lat="+document.getElementById("latitude").value+"&lon="+document.getElementById("longitude").value;
+}
+}
+if (app == "vv") {
+  document.getElementById("link").innerHTML = "https://drwjf.github.io/v1/sharemarker?name="+encodeURIComponent(document.getElementById("marker").value)+"&lat="+document.getElementById("latitude").value+"&lon="+document.getElementById("longitude").value;
+}
+if (app == "community") {
+  document.getElementById("link").innerHTML = "https://share.soundscape.services/v1/sharemarker?name="+encodeURIComponent(document.getElementById("marker").value)+"&lat="+document.getElementById("latitude").value+"&lon="+document.getElementById("longitude").value;
+}
+}
 }
 
     </script>
@@ -55,12 +79,22 @@ When you click the button below, this website will request your location. This w
 <br/>
 <button onclick="getLocation()">Mark current location</button>
     </div>
+<h2>Choose an app</h2>
+<p>As the Microsoft Soundscape app has been pulled from the App Store and existing installations will likely only partially work after the end of August 2023, please choose which app you would like to create the marker in.</p>
+<input type="radio" id="original" app="ms" name="soundscape" value="Microsoft Soundscape (original app)">
+<label for="original">Microsoft Soundscape (original app)</label><br>
 
-<h2>Open Soundscape</h2>
-Click the button below to open the Soundscape app and display the place as a marker.
-<br/>Make sure you have the Microsoft Soundscape app installed and that location services are enabled.<br/>
-If you are on a device without Soundscape installed, you will need to get a link instead.
-<button onclick="create()">Open Soundscape</button>    
+<input type="radio" id="community" app="community" name="soundscape" value="Soundscape Community">
+<label for="community">Soundscape Community</label><br>
+
+<input type="radio" id="voicevista" onclick="app="vv" name="soundscape" value="VoiceVista">
+<label for="voicevista">VoiceVista</label><br>
+
+<h2>Open your app</h2>
+Click the button below to open your chosen app and display the place as a marker.
+<br/>Make sure you have your chosen app installed and that location services are enabled.<br/>
+If you are on a device without this app installed, you will need to get a link instead.
+<button onclick="create()">Open app</button>    
 <h2>Or generate a sharable link for your marker</h2>
 Click below to generate a unique link which can be shared with other people. Anyone with Soundscape installed can simply click the link to get started.
 <br/>
